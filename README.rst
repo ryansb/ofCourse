@@ -5,6 +5,12 @@ HFLOSSK
 .. image:: https://pypip.in/v/hflossk/badge.png
 .. image:: https://pypip.in/d/hflossk/badge.png
 
+Warning
+=======
+
+This is an enormous cleanup and rename of HFLOSSK, and things will break at
+least temporarily. Old history will disappear. Just be aware. - ryansb 11/21/14
+
 Wat?
 ----
 This repository is an experiment to use Flask, Mako, and Bootstrap to make a

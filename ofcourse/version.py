@@ -5,4 +5,4 @@ License: Apache 2.0
 
 import pkg_resources
 
-__version__ = pkg_resources.get_distribution('hflossk').version
+__version__ = pkg_resources.get_distribution('ofcourse').version

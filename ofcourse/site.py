@@ -19,10 +19,10 @@ from flask import jsonify
 from flask.ext.mako import MakoTemplates, render_template
 from werkzeug.exceptions import NotFound
 
-# hflossk
-from hflossk.util import count_posts, app_path
-from hflossk.blueprints import homework, lectures, quizzes
-from hflossk.participants import participants_bp
+# ofcourse
+from ofcourse.util import count_posts, app_path
+from ofcourse.blueprints import homework, lectures, quizzes
+from ofcourse.participants import participants_bp
 
 app = Flask(__name__)
 app.static_folder = app_path("static")

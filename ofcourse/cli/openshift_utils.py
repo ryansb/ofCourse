@@ -30,7 +30,7 @@ setup(name='thecourse',
       author='Dr. Professor',
       author_email='dr@professor.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['hflossk'],
+      install_requires=['ofcourse'],
      )""",
     },
     "wsgi.py": {
@@ -47,9 +47,9 @@ try:
 except IOError:
     pass
 
-import hflossk.site
+import ofcourse.site
 
-application = hflossk.site.app""",
+application = ofcourse.site.app""",
     },
 }
 
@@ -80,7 +80,7 @@ index 0000000..0b3a53c
 +      author='Dr. Professor',
 +      author_email='dr@professor.com',
 +      url='http://www.python.org/sigs/distutils-sig/',
-+      install_requires=['hflossk>=0.5.3'],
++      install_requires=['ofcourse>=0.5.3'],
 +     )
 diff --git a/wsgi.py b/wsgi.py
 new file mode 100644
@@ -101,9 +101,9 @@ index 0000000..409ddfb
 +except IOError:
 +    pass
 +
-+import hflossk.site
++import ofcourse.site
 +
-+application = hflossk.site.app
++application = ofcourse.site.app
 --
 1.9.3
 """

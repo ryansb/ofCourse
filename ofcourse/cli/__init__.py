@@ -10,15 +10,15 @@ import click
 from distutils import dir_util
 from distutils import file_util
 
-from hflossk.cli.util import year, season
-from hflossk.cli.openshift_utils import (generate_token,
-                                         get_api,
-                                         get_app,
-                                         is_dirty,
-                                         new_app,
-                                         push,
-                                         )
-from hflossk.version import __version__
+from ofcourse.cli.util import year, season
+from ofcourse.cli.openshift_utils import (generate_token,
+                                          get_api,
+                                          get_app,
+                                          is_dirty,
+                                          new_app,
+                                          push,
+                                          )
+from ofcourse.version import __version__
 
 
 @click.group()
@@ -29,7 +29,7 @@ def cli():
 @cli.command(short_help="Run your course locally, and view it on "
              "http://localhost:5000")
 def run():
-    from hflossk.site import app
+    from ofcourse.site import app
     app.run(
         debug=True,
         threaded=True,
@@ -76,9 +76,9 @@ def new():
 
 @cli.command()
 def version():
-    click.echo("You are using hflossk version {}".format(__version__))
+    click.echo("You are using ofcourse version {}".format(__version__))
     click.echo("Get more information at "
-               "https://github.com/decause/hflossk")
+               "https://github.com/ryansb/ofCourse")
 
 
 @cli.command(short_help="Push this to openshift. Requires "
@@ -97,7 +97,7 @@ def openshift(verbose, app, user):
             "committed won't be pushed to openshift.\n"
             "Do you want to continue?", abort=True
         )
-    conf = os.path.join(os.getenv("HOME"), ".hflossk.token")
+    conf = os.path.join(os.getenv("HOME"), ".ofcourse.token")
     token = None
     try:
         with open(conf, 'r') as cfg:

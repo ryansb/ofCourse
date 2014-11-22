@@ -1,13 +1,14 @@
 import os
 
+from datetime import datetime, date, timedelta
+from urlparse import urlparse
 import yaml
 
 from flask import Blueprint
 from flask.ext.mako import render_template
-from datetime import datetime, date, timedelta
-import hflossk
-from hflossk.util import app_path
-from urlparse import urlparse
+
+import ofcourse
+from ofcourse.util import app_path
 
 participants_bp = Blueprint('participants_bp',
                             __name__,
@@ -94,14 +95,14 @@ def participants(root_dir):
                     student_data.append(contents)
 
     assignments = ['litreview1']
-    elapsed = (datetime.today() - hflossk.site.COURSE_START).total_seconds()
+    elapsed = (datetime.today() - ofcourse.site.COURSE_START).total_seconds()
     target_number = int(elapsed / timedelta(weeks=1).total_seconds() + 1 +
                         len(assignments))
 
     return render_template(
         'blogs.mak', name='mako',
         student_data=student_data,
-        gravatar=hflossk.site.gravatar,
+        gravatar=ofcourse.site.gravatar,
         target_number=target_number
     )
 

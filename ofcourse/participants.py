@@ -4,7 +4,7 @@ from datetime import datetime, date, timedelta
 from urlparse import urlparse
 import yaml
 
-from flask import Blueprint
+from flask import Blueprint, redirect
 from flask.ext.mako import render_template
 
 import ofcourse
@@ -30,13 +30,18 @@ def participants_blank():
     return participants_year_term(currentYear, currentTerm)
 
 
-@participants_bp.route('/<year>')
-def participants_year(year):
+@participants_bp.route('/<year_or_nick>')
+def participants_year(year_or_nick):
     """
     This will get all the participants
     within a given year
     """
-    return participants(year + '/')
+    p_url = find_participant(year_or_nick)
+    if p_url is not None:
+        # render individual page
+        return redirect(p_url)
+    # otherwise render as a year
+    return participants(year_or_nick + '/')
 
 
 @participants_bp.route('/<year>/<term>')
@@ -106,4 +111,14 @@ def participants(root_dir):
         target_number=target_number
     )
 
-#
+
+def find_participant(nick):
+    yaml_dir = app_path('people')
+
+    for dirpath, dirnames, files in os.walk(yaml_dir):
+        for fname in files:
+            if (fname.lower().startswith(nick.lower())
+                    and fname.endswith('.yaml')):
+                participant = os.path.join(dirpath, fname).replace(yaml_dir, '')
+                participant = participant.replace('.yaml', '')
+                return 'participants' + participant

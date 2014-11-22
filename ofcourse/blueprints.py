@@ -3,7 +3,7 @@ import os
 from flask import Blueprint
 from flask.ext.mako import render_template
 
-from hflossk.util import app_path
+from ofcourse.util import app_path
 
 
 homework = Blueprint('homework', __name__, template_folder='templates')

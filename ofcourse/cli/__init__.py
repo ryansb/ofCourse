@@ -68,8 +68,6 @@ def new():
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'oer.yaml'),
                         os.getcwd(), update=True)
-    file_util.copy_file(os.path.join(yamls_dir, 'schedule.yaml'),
-                        os.getcwd(), update=True)
 
     click.echo(u'\u2714 Starter yaml files for data driven education')
 

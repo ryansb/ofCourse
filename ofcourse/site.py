@@ -80,9 +80,7 @@ def syllabus():
 
     """
 
-    with open(app_path('schedule.yaml')) as schedule_yaml:
-        schedule = yaml.load(schedule_yaml)
-    return render_template('syllabus.mak', schedule=schedule, name='mako')
+    return render_template('syllabus.mak', name='mako')
 
 
 @app.route('/blog/<username>')

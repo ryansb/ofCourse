@@ -31,12 +31,12 @@ Docs are available on [ReadTheDocs][rtfd]
 
 ## Tests
 
-All tests are run using tox. To run the tests::
+All tests are run using tox. To run the tests
 
-$ virtualenv --no-site-packages -p python2 ofcourse_env
-$ . ofcourse_env/bin/activate
-$ pip install tox
-$ tox
+    $ virtualenv --no-site-packages -p python2 ofcourse_env
+    $ . ofcourse_env/bin/activate
+    $ pip install tox
+    $ tox
 
 Tests check validity of all yaml, and the keys in any student yaml files. Tests
 also checks that code conforms to PEP8.

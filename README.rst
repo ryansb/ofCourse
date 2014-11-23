@@ -33,11 +33,10 @@ Docs
 
 Docs are available on `ReadTheDocs`_
 
-.. image:: https://readthedocs.org/projects/ofcourse/badge/?version=latest
-    :target: http://ofcourse.readthedocs.org/en/latest
-
 .. _ReadTheDocs:: http://ofcourse.readthedocs.org/
 
+.. image:: https://readthedocs.org/projects/ofcourse/badge/?version=latest
+    :target: http://ofcourse.readthedocs.org/en/latest
 
 Tests
 -----

@@ -7,5 +7,5 @@ include ofcourse/yamls/site.yaml
 include ofcourse/yamls/schedule.yaml
 include ofcourse/yamls/fake_student.yaml
 recursive-include docs *
-recursive-include ofcourse/templates *
+recursive-include templates *
 recursive-include ofcourse/static *

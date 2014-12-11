@@ -6,9 +6,9 @@ from flask.ext.mako import render_template
 from ofcourse.util import app_path
 
 
-homework = Blueprint('homework', __name__, template_folder='templates')
-lectures = Blueprint('lectures', __name__, template_folder='templates')
-quizzes = Blueprint('quizzes', __name__, template_folder='templates')
+homework = Blueprint('homework', __name__, template_folder=app_path('templates'))
+lectures = Blueprint('lectures', __name__, template_folder=app_path('templates'))
+quizzes = Blueprint('quizzes', __name__, template_folder=app_path('templates'))
 
 
 @homework.route('/', defaults={'page': 'index'})

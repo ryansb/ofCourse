@@ -9,6 +9,7 @@ if os.path.isdir(os.path.join(os.getcwd(), "app-root", "repo")):
 
 
 def app_path(*args):
+    print os.path.join(base_dir, *args)
     return os.path.join(base_dir, *args)
 
 

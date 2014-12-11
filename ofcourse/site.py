@@ -27,6 +27,7 @@ from ofcourse.participants import participants_bp
 app = Flask(__name__)
 app.static_folder = app_path("static")
 app.templates_folder = app_path("templates")
+app.people_folder = app_path("people")
 mako = MakoTemplates(app)
 
 
@@ -83,8 +84,8 @@ def syllabus():
     return render_template('syllabus.mak', name='mako')
 
 
-@app.route('/blog/<username>')
-def blog_posts(username):
+@app.route('/blog/<year>/<term>/<username>')
+def blog_posts(year, term, username):
     """
     Count number of posts on a student's
     blog.
@@ -93,7 +94,9 @@ def blog_posts(username):
 
     student_data = None
 
-    fname = username
+    fname = os.path.join(app.people_folder, year, term, username) + ".yaml"
+
+    print "Getting blog count for: " + fname
     with open(fname) as student:
         contents = yaml.load(student)
         student_data = contents

@@ -12,7 +12,7 @@ from ofcourse.util import app_path
 
 participants_bp = Blueprint('participants_bp',
                             __name__,
-                            template_folder='templates')
+                            template_folder=app_path('templates'))
 
 
 currentYear = str(date.today().year)

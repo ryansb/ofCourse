@@ -62,14 +62,6 @@
             <li><a target="_blank" href="${forge_link}">${forge_link}</a></li>
           % endfor
 
-          <!--
-          % if student.get('litreview1'):
-            <li><a target="_blank" href="${student['litreview1']}">Litreview1</a></li>
-          % else:
-	  <li class="redtext">litreview1?</li>
-          % endif
-          -->
-
           <% if 'hw' not in student: student['hw'] = [] %>
           % if student['isActive']:
             % for key in hw_keys:

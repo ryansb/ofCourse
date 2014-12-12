@@ -65,12 +65,14 @@ def new():
     file_util.copy_file(os.path.join(yamls_dir, 'fake_student.yaml'),
                         people_dir, update=True)
 
+    file_util.copy_file(os.path.join(yamls_dir, 'hw.yaml'),
+                        os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'site.yaml'),
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'oer.yaml'),
                         os.getcwd(), update=True)
 
-    click.echo(u'\u2714 Starter yaml files for data driven education')
+   click.echo(u'\u2714 Starter yaml files for data driven education')
 
 
 @cli.command()

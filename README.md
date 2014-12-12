@@ -12,12 +12,10 @@ least temporarily. Old history will disappear. Just be aware. - ryansb 11/21/14
 ## About
 
 This repository is an experiment to use Flask, Mako, and Bootstrap to make a
-website for the Humanitarian Free/Open Source Software Course at RIT. This
-repository is a work in progress (as any FOSS project is), and will be open for
-contributions.
+website for courses on Free/Open Source Software at RIT.
 
-The content shown here is a compilation of course materials from 4 previous
-professors, who've run the course 5 separate times. Those profs are:
+This courseware and its predecessors have been used by 4 previous professors,
+who've run the course 5 separate times. Those profs are:
     - Stephen Jacobs
     - Dave Shein (x2)
     - Ralph Bean

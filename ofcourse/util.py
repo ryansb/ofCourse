@@ -53,7 +53,9 @@ def get_hw_keys():
 
     key_file = app_path("hw.yaml")
 
-    with open(key_file) as key_data:
-        keys = yaml.load(key_data)
-
+    try:
+        with open(key_file) as key_data:
+            keys = yaml.load(key_data)
+    except IOError:
+        print "Error: File missing!" + key_file
     return keys

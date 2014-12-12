@@ -66,14 +66,13 @@
           % if student.get('litreview1'):
             <li><a target="_blank" href="${student['litreview1']}">Litreview1</a></li>
           % else:
-            <li class="redtext">litreview1?</li>
+	  <li class="redtext">litreview1?</li>
           % endif
           -->
 
           <% if 'hw' not in student: student['hw'] = [] %>
           % if student['isActive']:
-            <% keys = ['quiz1', 'litreview1', 'bugfix', 'commarchpreso', 'commarchreport', 'teamprop1', 'teamprop2', 'litreview2', 'quiz2'] %>
-            % for key in keys:
+            % for key in hw_keys:
                 % if key in student['hw']:
                   <li><a target="_blank" href="${student['hw'][key]}">${key}</a></li>
                 % else:

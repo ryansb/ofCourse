@@ -8,7 +8,7 @@ from flask import Blueprint, redirect
 from flask.ext.mako import render_template
 
 import ofcourse
-from ofcourse.util import app_path
+from ofcourse.util import app_path, get_hw_keys
 
 participants_bp = Blueprint('participants_bp',
                             __name__,
@@ -108,7 +108,8 @@ def participants(root_dir):
         'blogs.mak', name='mako',
         student_data=student_data,
         gravatar=ofcourse.site.gravatar,
-        target_number=target_number
+        target_number=target_number,
+        hw_keys=get_hw_keys()
     )
 
 

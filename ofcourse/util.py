@@ -1,6 +1,7 @@
 import os
 import time
 import feedparser
+import yaml
 from datetime import datetime
 
 base_dir = os.getcwd()
@@ -37,3 +38,22 @@ def count_posts(feed, start_dt):
             continue
         count += 1
     return count
+
+
+def get_hw_keys():
+    """
+    Return the YAML keys for homework assignments for the current
+    term.
+
+    :returns: A list of YAML keys corresponding to each HW assignment
+    :rtype: list
+    """
+
+    keys = []
+
+    key_file = app_path("hw.yaml")
+
+    with open(key_file) as key_data:
+        keys = yaml.load(key_data)
+
+    return keys

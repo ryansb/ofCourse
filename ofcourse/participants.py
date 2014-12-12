@@ -109,7 +109,7 @@ def participants(root_dir):
         student_data=student_data,
         gravatar=ofcourse.site.gravatar,
         target_number=target_number,
-        hw_keys=get_hw_keys()
+        hw_keys=get_hw_keys(),
     )
 
 

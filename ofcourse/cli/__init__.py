@@ -65,7 +65,7 @@ def new():
     file_util.copy_file(os.path.join(yamls_dir, 'fake_student.yaml'),
                         people_dir, update=True)
 
-    file_util.copy_file(os.path.join(yamls_dir, 'hw.yaml'),
+    file_util.copy_file(os.path.join(yamls_dir, 'assignments.yaml'),
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'site.yaml'),
                         os.getcwd(), update=True)

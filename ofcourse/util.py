@@ -51,7 +51,7 @@ def get_hw_keys():
 
     keys = []
 
-    key_file = app_path("hw.yaml")
+    key_file = app_path("assignments.yaml")
 
     try:
         with open(key_file) as key_data:

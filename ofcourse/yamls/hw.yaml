@@ -1,4 +1,5 @@
 # Example ofCourse hw.yaml
 # Homework keys should be added as YAML
 # list elements.
-- firstflight
+hw:
+  - firstflight

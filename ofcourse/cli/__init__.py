@@ -51,7 +51,7 @@ def new():
     click.echo(u'\u2714 CSS/Javascript for browser art')
 
     templates_dir = os.path.join(os.getcwd(), 'templates')
-    dir_util.copy_tree(os.path.join(source_dir, '..', 'templates'),
+    dir_util.copy_tree(os.path.join(source_dir, '..', 'ofcourse-templates'),
                        templates_dir, update=True)
 
     click.echo(u'\u2714 Starter Mako templates for great good')

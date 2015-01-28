@@ -99,7 +99,7 @@ def participants(root_dir):
 
                     student_data.append(contents)
 
-    assignments = get_hw_keys();
+    assignments = get_hw_keys()
     elapsed = (datetime.today() - ofcourse.site.COURSE_START).total_seconds()
     target_number = int(elapsed / timedelta(weeks=1).total_seconds() + 1 +
                         len(assignments))

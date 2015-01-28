@@ -8,7 +8,7 @@ course:
     course: 4085.582.01
     location: Orange Hall (ORN)-1380
     repo: https://github.com/decause/hfoss
-    prod: https://hfoss-ritigm.rhcloud.com
+# Optional if using OpenShift    public_url: http://hfoss-ritigm.rhcloud.com
 
 instructor:
     name: Remy DeCausemaker

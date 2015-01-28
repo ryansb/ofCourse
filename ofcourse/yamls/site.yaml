@@ -7,6 +7,8 @@ course:
     times: Tues & Thurs 6:30PM - 7:45PM
     course: 4085.582.01
     location: Orange Hall (ORN)-1380
+    repo: https://github.com/decause/hfoss
+    prod: https://hfoss-ritigm.rhcloud.com
 
 instructor:
     name: Remy DeCausemaker

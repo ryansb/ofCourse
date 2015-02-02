@@ -36,6 +36,10 @@ mako = MakoTemplates(app)
 def inject_yaml():
     with open(app_path('site.yaml')) as site_yaml:
         site_config = yaml.load(site_yaml)
+        if 'public_url' not in site_config['course']:
+            course_config = site_config['course']
+            course_url = "https://" + os.environ['OPENSHIFT_GEAR_DNS']
+            course_config['public_url'] = course_url
     return site_config
 
 app.config['MAKO_TRANSLATE_EXCEPTIONS'] = False

@@ -4,7 +4,7 @@
 [![version](https://pypip.in/v/ofcourse/badge.png)](https://pypi.python.org/pypi/ofcourse/)
 [![downloads](https://pypip.in/download/ofcourse/badge.svg)](https://pypi.python.org/pypi/ofcourse/)
 
-# Warning
+## Warning
 
 This is an enormous cleanup and rename of HFLOSSK, and things will break at
 least temporarily. Old history will disappear. Just be aware. - ryansb 11/21/14
@@ -16,10 +16,11 @@ website for courses on Free/Open Source Software at RIT.
 
 This courseware and its predecessors have been used by 4 previous professors,
 who've run the course 5 separate times. Those profs are:
-    - Stephen Jacobs
-    - Dave Shein (x2)
-    - Ralph Bean
-    - Justin Sherrill
+
+- Stephen Jacobs
+- Dave Shein (x2)
+- Ralph Bean
+- Justin Sherrill
 
 ## Docs
 
@@ -31,15 +32,15 @@ Docs are available on [ReadTheDocs][rtfd]
 
 All tests are run using tox. To run the tests
 
-    $ virtualenv --no-site-packages -p python2 ofcourse_env
-    $ . ofcourse_env/bin/activate
-    $ pip install tox
-    $ tox
+	$ virtualenv --no-site-packages -p python2 ofcourse_env
+	$ . ofcourse_env/bin/activate
+	$ pip install tox
+	$ tox
 
 Tests check validity of all yaml, and the keys in any student yaml files. Tests
 also checks that code conforms to PEP8.
 
-# License
+## License
 
 Copyright 2013 Remy DeCausemaker
 

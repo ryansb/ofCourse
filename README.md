@@ -1,5 +1,4 @@
 # ofCourse - Open, Free Course(ware)
-ai
 [![test status](https://api.travis-ci.org/ryansb/ofCourse.svg)](https://travis-ci.org/ryansb/ofCourse)
 [![version](https://pypip.in/v/ofcourse/badge.png)](https://pypi.python.org/pypi/ofcourse/)
 [![downloads](https://pypip.in/download/ofcourse/badge.svg)](https://pypi.python.org/pypi/ofcourse/)

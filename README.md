@@ -1,4 +1,5 @@
 # ofCourse - Open, Free Course(ware)
+
 [![test status](https://api.travis-ci.org/ryansb/ofCourse.svg)](https://travis-ci.org/ryansb/ofCourse)
 [![version](https://pypip.in/v/ofcourse/badge.png)](https://pypi.python.org/pypi/ofcourse/)
 [![downloads](https://pypip.in/download/ofcourse/badge.svg)](https://pypi.python.org/pypi/ofcourse/)
@@ -46,7 +47,7 @@ To view an ofCourse website you'll want to run the following commands.
     $ cd <ofcourse_website_directory>
     $ ofcourse run
 
-### Tests
+## Tests
 
 All tests are run using tox. To run the tests
 

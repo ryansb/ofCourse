@@ -1,5 +1,5 @@
 # ofCourse - Open, Free Course(ware)
-
+ai
 [![test status](https://api.travis-ci.org/ryansb/ofCourse.svg)](https://travis-ci.org/ryansb/ofCourse)
 [![version](https://pypip.in/v/ofcourse/badge.png)](https://pypi.python.org/pypi/ofcourse/)
 [![downloads](https://pypip.in/download/ofcourse/badge.svg)](https://pypi.python.org/pypi/ofcourse/)
@@ -28,7 +28,26 @@ Docs are available on [ReadTheDocs][rtfd]
 
 [![readthedocs](https://readthedocs.org/projects/ofcourse/badge/?version=latest)](http://ofcourse.readthedocs.org/en/latest)
 
-## Tests
+## Running An ofCourse Site
+
+### Prerequisites
+
+You'll probably want to have a python virtualenv setup for testing your
+ofCourse website. To install virtualenv simply type the following
+command into a root shell.
+
+    $ pip install virtualenv
+
+### Viewing the Site
+
+To view an ofCourse website you'll want to run the following commands.
+
+    $ virtualenv --no-site-packages -p python2 ofcourse_env
+    $ . ofcourse_env/bin/activate
+    $ cd <ofcourse_website_directory>
+    $ ofcourse run
+
+### Tests
 
 All tests are run using tox. To run the tests
 

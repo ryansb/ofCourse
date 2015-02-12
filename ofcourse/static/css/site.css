@@ -32,6 +32,12 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
 }
 
+/* create new stacking context 1 above the auto level */
+.raise {
+  position: relative;
+  z-index: 1;
+}
+
 .lecture_list>li{
     font-size: 24.5px;
     margin: -10px 0;

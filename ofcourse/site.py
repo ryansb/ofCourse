@@ -37,7 +37,7 @@ def inject_yaml():
     with open(app_path('site.yaml')) as site_yaml:
         site_config = yaml.load(site_yaml)
 
-        if site_config['course'].get('public_url', None) is not None :
+        if site_config['course'].get('public_url', None) is not None:
             course_config = site_config['course']
         elif os.environ.get('OPENSHIFT_GEAR_DNS', None) is not None:
                 course_url = "https://" + os.environ['OPENSHIFT_GEAR_DNS']

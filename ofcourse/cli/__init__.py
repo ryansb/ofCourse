@@ -62,6 +62,8 @@ def new():
     if not os.path.isdir(people_dir):
         os.makedirs(people_dir)
 
+    test_dir = os.path.join(source_dir, 'test_base')
+
     file_util.copy_file(os.path.join(yamls_dir, 'fake_student.yaml'),
                         people_dir, update=True)
 
@@ -70,6 +72,15 @@ def new():
     file_util.copy_file(os.path.join(yamls_dir, 'site.yaml'),
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'oer.yaml'),
+                        os.getcwd(), update=True)
+
+    file_util.copy_file(os.path.join(test_dir, 'setup.py'),
+                        os.getcwd(), update=True)
+    file_util.copy_file(os.path.join(test_dir, 'setup.cfg'),
+                        os.getcwd(), update=True)
+    file_util.copy_file(os.path.join(test_dir, 'tox.ini'),
+                        os.getcwd(), update=True)
+    file_util.copy_file(os.path.join(test_dir, 'README.md'),
                         os.getcwd(), update=True)
 
     click.echo(u'\u2714 Starter yaml files for data driven education')

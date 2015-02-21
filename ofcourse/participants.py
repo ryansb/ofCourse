@@ -94,8 +94,8 @@ def participants(root_dir):
                         if "github.com" in url.netloc:
                             contents['github'] = url.path[1:]
 
-                    contents['isActive'] = (currentYear in year_term_data
-                                            and currentTerm in year_term_data)
+                    contents['isActive'] = (currentYear in year_term_data and
+                                            currentTerm in year_term_data)
 
                     student_data.append(contents)
 
@@ -118,9 +118,11 @@ def find_participant(nick):
 
     for dirpath, dirnames, files in os.walk(yaml_dir):
         for fname in files:
-            if (fname.lower().startswith(nick.lower())
-                    and fname.endswith('.yaml')):
-                participant = os.path.join(dirpath, fname).replace(
-                    yaml_dir, '')
+            if (fname.lower().startswith(nick.lower()) and
+                    fname.endswith('.yaml')):
+                participant = os.path.join(
+                    dirpath,
+                    fname
+                ).replace(yaml_dir, '')
                 participant = participant.replace('.yaml', '')
                 return 'participants' + participant

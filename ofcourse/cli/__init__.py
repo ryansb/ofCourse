@@ -80,6 +80,8 @@ def new():
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(test_dir, 'tox.ini'),
                         os.getcwd(), update=True)
+    file_util.copy_file(os.path.join(test_dir, '.travis.yml'),
+                        os.getcwd(), update=True)
     file_util.copy_file(os.path.join(test_dir, 'README.md'),
                         os.getcwd(), update=True)
 

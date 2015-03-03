@@ -136,7 +136,7 @@ def participant_page(year, term, username):
         participant_data = yaml.load(participant_data)
 
     return render_template(
-        'participant.mak', name='make',
+        'participant.mak', name='mako',
         participant_data=participant_data,
         gravatar=gravatar
     )

@@ -153,3 +153,35 @@ msysGit::
   $ git push origin master
 
 And now your course is published on GitHub!
+
+Deploying to OpenShift
+++++++++++++++++++++++
+
+Deploying to OpenShift is fairly simple once you have your local instance up and
+running. Before deploying you need to make sure that you have an openshift
+account and a few extra things configured.
+
+If you don't yet have an account feel free to go to openshifts account creation
+page which can be found `here <https://www.openshift.com/app/account/new>`__.
+
+Once you have an account created, you then need to go to your
+`settings page <https://openshift.redhat.com/app/console/settings>`_ and set
+the domain name for the app that you will be using. This creates a url which
+will look similar to the following where {{domain-name}} is substituted with
+what you enter.
+
+  http://{{application-name}}-{{domain-name}}.rhcloud.com
+
+After you have your domain name set, the last think you need to do is submit
+ssh key which will allow you to push your newly created code to OpenShift's
+servers. Github provides a fantastic guide on setting up your SSH keys
+`here <https://help.github.com/articles/generating-ssh-keys/>`__, if you have
+already created your SSH key, simply paste them into the text box
+`here <https://openshift.redhat.com/app/console/keys/new>`__.
+
+Lastly you'll need to choose an app name. Lets say for this example we will be
+calling our app `SuperAwesomeApp`. Simply run the following::
+
+  ofcourse openshift --app SuperAwesomeApp
+
+Follow the instructions on the screen and your app should be deployed now!

@@ -19,7 +19,8 @@ from ofcourse.cli.openshift_utils import (generate_token,
                                           push,
                                           )
 from ofcourse.version import __version__
-
+from ofcourse.tests.test_yaml import TestAllYaml
+import unittest
 
 @click.group()
 def cli():
@@ -81,6 +82,19 @@ def version():
     click.echo("Get more information at "
                "https://github.com/ryansb/ofCourse")
 
+@cli.command(short_help="Validates ofcourse website using "
+             "all of the tests currently built into ofcourse "
+             "Currently these tests validate YAML files")
+@click.pass_context
+def validate(ctx):
+    click.echo("Validating ofCourse Participant YAML Files")
+
+    suite = unittest.TestSuite()
+    suite.addTest(TestAllYaml("test_recursive_yaml"))
+    suite.addTest(TestAllYaml("test_student_yaml"))
+
+    runner = unittest.TextTestRunner()
+    ctx.exit(len(runner.run(suite).failures))
 
 @cli.command(short_help="Push this to openshift. Requires "
              "http://openshift.com account. Will check for "

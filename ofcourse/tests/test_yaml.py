@@ -28,11 +28,11 @@ class TestAllYaml(unittest.TestCase):
             'blog': [Required, is_str],
             'feed': [Required, is_str],
             'forges': [Required, InstanceOf(list)],
+            'hw': [Required, InstanceOf(dict)],
             'irc': [Required, is_str],
             'name': [Required, is_str],
             'rit_dce': [Required, is_str],
             # optional fields
-            'hw': [InstanceOf(dict)],
             'bio': [is_str],
             'twitter': [is_str],
             'coderwall': [is_str],
@@ -40,7 +40,7 @@ class TestAllYaml(unittest.TestCase):
 
         student_files = []
         for root, _, fnames in os.walk(
-                os.path.join(os.getcwd(), "scripts/people")):
+                os.path.join(os.getcwd(), "people")):
             for fname in fnames:
                 if (fname.endswith('.yaml') or fname.endswith('.yml')):
                     student_files.append(os.path.join(root, fname))

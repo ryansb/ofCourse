@@ -28,6 +28,13 @@ def cli():
     pass
 
 
+@cli.command()
+def version():
+    click.echo("You are using ofcourse version {}".format(__version__))
+    click.echo("Get more information at "
+               "https://github.com/ryansb/ofCourse")
+
+
 @cli.command(short_help="Run your course locally, and view it on "
              "http://localhost:5000")
 def run():
@@ -79,11 +86,45 @@ def new():
     click.echo(u'\u2714 Starter yaml files for data driven education')
 
 
-@cli.command()
-def version():
-    click.echo("You are using ofcourse version {}".format(__version__))
-    click.echo("Get more information at "
-               "https://github.com/ryansb/ofCourse")
+@cli.command(short_help="Synchronize templates from ofcourse to your content" +
+             " repository")
+def sync():
+    click.confirm('This will add (and potentially overwrite) files in your' +
+                  ' course repository. The changes will not be permanent and' +
+                  ' you can use git to undo anything you would rather not' +
+                  ' have. Would you like to continue?', abort=True)
+    module_dir = os.path.split(__file__)[0].replace('cli', '')
+
+    templates_src = os.path.join(
+        module_dir,
+        '..',
+        'ofcourse-templates',
+    )
+
+    templates_dest = os.path.join(os.getcwd(), 'templates')
+
+    if not os.path.isdir(templates_dest):
+        click.echo(u'\u2717 Uhoh, {} is not a directory...')
+        click.echo(u'If you are trying to start a new course, try' +
+                   u' `ofcourse new`')
+        click.echo(u'If you are updating an existing course, make' +
+                   u' sure you are in the right directory')
+        click.exit(1)
+
+    dir_util.copy_tree(templates_src, templates_dest, update=True)
+
+    click.echo(u'\u2714 Your templates have been updated!')
+
+    static_dest = os.path.join(os.getcwd(), 'static')
+
+    dir_util.copy_tree(os.path.join(module_dir, 'static'),
+                       static_dest, update=True)
+
+    click.echo(u'\u2714 Your static content (CSS/JS) has been updated!')
+
+    click.echo(u'Make sure to add the new files to your git repository')
+    click.echo(u'Tip: To see what\'s new, use `git add -p` to stage changes' +
+               u' individually, and `git status` to check for new files')
 
 
 @cli.command(short_help="Validates ofcourse website using "

@@ -168,7 +168,7 @@ def openshift(verbose, app, user):
         # apps, and if there's a failure we just fall through to
         # asking for uname/pass
         api.app_list()
-    except Exception as e:
+    except Exception:
         if not user:
             user = click.prompt("Openshift username")
         password = click.prompt("Openshift password", hide_input=True)

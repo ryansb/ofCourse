@@ -81,12 +81,12 @@ class TempBranch(object):
         git.reset(self.repo, "hard")
 
 
-def push(name, api):
+def push(name, api, domain):
     repo = git.Repo(os.getcwd())
     branch = "temp-{}".format(str(uuid.uuid4())[:8])
-    set_deploy_branch(name, branch, api)
+    set_deploy_branch(name, branch, api, domain)
 
-    remote = git_url(name, api)
+    remote = git_url(name, api, domain)
 
     if is_dirty():
         print("Nuking changes.")
@@ -117,7 +117,7 @@ def push(name, api):
         git.rm(repo, openshift_files.keys())
         map(os.remove, openshift_files.keys())
 
-    return get_app(name, api)['app_url']
+    return get_app(name, api, domain)['app_url']
 
 
 def is_clean():
@@ -148,19 +148,19 @@ def generate_token(uname, passwd):
     return session.json().get("data", {}).get("token", "")
 
 
-def new_app(name, api, wait_until_available=True):
+def new_app(name, api, domain, wait_until_available=True):
     try:
-        get_app(name, api)
+        get_app(name, api, domain)
         return
     except:
         pass
     # Ok, the app doesn't exist
-    api.app_create(name, ['python-2.7'])
+    api.app_create(name, ['python-2.7'], domain_name=domain)
     if not wait_until_available:
         return
     while True:
         try:
-            app = get_app(name, api)
+            app = get_app(name, api, domain)
             socket.getaddrinfo(requests.utils.urlparse(
                 app['app_url']).netloc, 80)
             break
@@ -174,15 +174,16 @@ def new_app(name, api, wait_until_available=True):
             time.sleep(5)
 
 
-def get_app(name, api):
-    apps = [a for a in api.app_list()[1] if a.get("name", "") == name]
+def get_app(name, api, domain):
+    apps = [a for a in api.app_list(domain_name=domain)[1]
+            if a.get("name", "") == name]
     if apps:
         return apps[0]
     raise NotFound("Could not find app {}".format(name))
 
 
-def git_url(name, api):
-    app = get_app(name, api)
+def git_url(name, api, domain):
+    app = get_app(name, api, domain)
     remote = app['git_url']
     # change SSH URL
     # from "ssh://user@host/dir/repo.git"
@@ -190,7 +191,8 @@ def git_url(name, api):
     return remote.replace("ssh://", "").replace("/", ":", 1)
 
 
-def set_deploy_branch(name, branch, api):
-    app = get_app(name, api)
+def set_deploy_branch(name, branch, api, domain):
+    app = get_app(name, api, domain)
     if app['deployment_branch'] != branch:
-        api.app_action('UPDATE', name, deployment_branch=branch)
+        api.app_action('UPDATE', name, domain_name=domain,
+                       deployment_branch=branch)

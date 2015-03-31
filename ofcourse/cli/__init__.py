@@ -148,7 +148,8 @@ def validate(ctx):
 @click.option("--verbose", help="Show more info", is_flag=True)
 @click.option('--app', help="Openshift app name (e.g. hfoss)")
 @click.option('--user', help="Openshift username (usually your email)")
-def openshift(verbose, app, user):
+@click.option('--domain', help="Openshift domainname")
+def openshift(verbose, app, user, domain):
     appname = app
     site_yaml = os.path.join(os.getcwd(), 'site.yaml')
 
@@ -167,7 +168,7 @@ def openshift(verbose, app, user):
         # The idea here is that we test out the token by listing
         # apps, and if there's a failure we just fall through to
         # asking for uname/pass
-        api.app_list()
+        api.app_list(domain_name=domain)
     except Exception:
         if not user:
             user = click.prompt("Openshift username")
@@ -177,6 +178,8 @@ def openshift(verbose, app, user):
             cfg.write(token)
 
     api = get_api(token)
+    if not domain:
+        domain = api.domain_get()[1]
 
     if (not appname) and os.path.isfile(site_yaml):
         with open(site_yaml, 'r') as site:
@@ -186,14 +189,14 @@ def openshift(verbose, app, user):
                                   ).get("app_name", None)
 
     try:
-        get_app(appname, api)
+        get_app(appname, api, domain)
     except:
         if click.confirm("The app {} could not be found, should I create it"
                          " automatically?".format(appname)):
-            new_app(appname, api)
+            new_app(appname, api, domain)
 
     if verbose:
         click.echo("Pushing files to openshift app {}".format(appname))
 
-    app_url = push(appname, api)
+    app_url = push(appname, api, domain)
     click.echo("Your app is now on Openshift at {}".format(app_url))

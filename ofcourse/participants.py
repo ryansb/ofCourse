@@ -77,7 +77,7 @@ def participants(root_dir):
     student_data = []
     for dirpath, dirnames, files in os.walk(yaml_dir):
         dirpath = dirpath.rstrip("/")
-        for fname in files:
+        for fname in sorted(files):
             if fname.endswith('.yaml'):
                 with open(dirpath + '/' + fname) as students:
                     contents = yaml.load(students)
@@ -109,7 +109,7 @@ def participants(root_dir):
         student_data=student_data,
         gravatar=ofcourse.site.gravatar,
         target_number=target_number,
-        hw_keys=assignments,
+        hw_keys=assignments
     )
 
 

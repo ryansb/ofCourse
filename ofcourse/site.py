@@ -53,16 +53,14 @@ COURSE_START = datetime.combine(config['course']['start'], datetime.min.time())
 COURSE_END = datetime.combine(config['course']['end'], datetime.max.time())
 
 
-def gravatar(email):
+def gravatar(person_data, fallback_key, fallback_suffix):
     """
     Get a gravatar for an email address.
 
-    I wish I could use libravatar here, but honestly, the students
-    will be better off using gravatar at this point (due to github
-    integration :/)
-
+    Defaults to libravatar with a gravatar fallback
+    Uses the "avatar" key if it exists, or defaults to school email.
     """
-
+    email = person_data.get("avatar", person_data[fallback_key] + fallback_suffix)
     email = email.encode('utf8').lower()
     slug = hashlib.md5(email).hexdigest()
     libravatarURL = "https://seccdn.libravatar.org/avatar/"
@@ -132,8 +130,8 @@ def participant_page(year, term, username):
     participant_data = {}
     yaml_dir = app_path('people')
     participant_yaml = os.path.join(yaml_dir, year, term, username + '.yaml')
-    with open(participant_yaml) as participant_data:
-        participant_data = yaml.load(participant_data)
+    with open(participant_yaml) as participant_file:
+        participant_data = yaml.load(participant_file)
 
     return render_template(
         'participant.mak', name='mako',

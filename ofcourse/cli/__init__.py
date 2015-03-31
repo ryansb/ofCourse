@@ -178,9 +178,9 @@ def openshift(verbose, app, user, domain):
             cfg.write(token)
 
     api = get_api(token)
-
     if not domain:
-        domain = api.domain_get()
+        domain = api.domain_get()[1]
+
     if (not appname) and os.path.isfile(site_yaml):
         with open(site_yaml, 'r') as site:
             s = yaml.load(site)

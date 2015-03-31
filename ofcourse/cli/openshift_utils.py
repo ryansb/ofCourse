@@ -175,7 +175,8 @@ def new_app(name, api, domain, wait_until_available=True):
 
 
 def get_app(name, api, domain):
-    apps = [a for a in api.app_list(domain_name=domain)[1] if a.get("name", "") == name]
+    apps = [a for a in api.app_list(domain_name=domain)[1]
+            if a.get("name", "") == name]
     if apps:
         return apps[0]
     raise NotFound("Could not find app {}".format(name))
@@ -193,4 +194,5 @@ def git_url(name, api, domain):
 def set_deploy_branch(name, branch, api, domain):
     app = get_app(name, api, domain)
     if app['deployment_branch'] != branch:
-        api.app_action('UPDATE', name, domain_name=domain, deployment_branch=branch)
+        api.app_action('UPDATE', name, domain_name=domain,
+                       deployment_branch=branch)

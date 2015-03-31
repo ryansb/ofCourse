@@ -60,7 +60,8 @@ def gravatar(person_data, fallback_key, fallback_suffix):
     Defaults to libravatar with a gravatar fallback
     Uses the "avatar" key if it exists, or defaults to school email.
     """
-    email = person_data.get("avatar", person_data[fallback_key] + fallback_suffix)
+    email = person_data.get("avatar",
+                            person_data[fallback_key] + fallback_suffix)
     email = email.encode('utf8').lower()
     slug = hashlib.md5(email).hexdigest()
     libravatarURL = "https://seccdn.libravatar.org/avatar/"

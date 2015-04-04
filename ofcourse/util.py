@@ -14,7 +14,7 @@ def app_path(*args):
     return os.path.join(base_dir, *args)
 
 
-def count_posts(feed, start_dt):
+def count_posts(feed, start_dt, end_dt=None):
     """
     Return the number of entries on this blog feed since a
     start date.
@@ -30,11 +30,14 @@ def count_posts(feed, start_dt):
 
     """
 
+    if end_dt is None:
+        end_dt = datetime.now()
+
     count = 0
     feed = feedparser.parse(feed)
     for item in feed.entries:
         publish_time = datetime.fromtimestamp(time.mktime(item.updated_parsed))
-        if publish_time < start_dt:
+        if end_dt < publish_time or publish_time < start_dt:
             continue
         count += 1
     return count

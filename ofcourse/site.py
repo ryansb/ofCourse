@@ -52,6 +52,11 @@ config = inject_yaml()
 COURSE_START = datetime.combine(config['course']['start'], datetime.min.time())
 COURSE_END = datetime.combine(config['course']['end'], datetime.max.time())
 
+BLOG_START = datetime.combine(config['course'].get(
+    'blog_start', COURSE_START), datetime.min.time())
+BLOG_END = datetime.combine(config['course'].get(
+    'blog_end', datetime.now()), datetime.max.time())
+
 
 def gravatar(person_data, fallback_key, fallback_suffix):
     """
@@ -112,7 +117,7 @@ def blog_posts(year, term, username):
     num_posts = 0
     if 'feed' in student_data:
         print("Checking %s's blog feed." % username)
-        num_posts = count_posts(student_data['feed'], COURSE_START)
+        num_posts = count_posts(student_data['feed'], BLOG_START, BLOG_END)
     else:
         print("No feed listed for %s!" % username)
         raise NotFound()

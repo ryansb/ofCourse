@@ -1,0 +1,1 @@
+ofcourse openshift --app $appname --user $openshift_email_address

@@ -183,7 +183,7 @@ def openshift(verbose, app, user, domain):
 
     if (not appname) and os.path.isfile(site_yaml):
         with open(site_yaml, 'r') as site:
-            s = yaml.load(site)
+            s = yaml.safe_load(site)
             appname = s.get("course", {}
                             ).get("openshift", {}
                                   ).get("app_name", None)

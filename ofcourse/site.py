@@ -35,7 +35,7 @@ mako = MakoTemplates(app)
 @app.context_processor
 def inject_yaml():
     with open(app_path('site.yaml')) as site_yaml:
-        site_config = yaml.load(site_yaml)
+        site_config = yaml.safe_load(site_yaml)
 
         course_url = "http://localhost:5000/"
 
@@ -111,7 +111,7 @@ def blog_posts(year, term, username):
 
     print "Getting blog count for: " + fname
     with open(fname) as student:
-        contents = yaml.load(student)
+        contents = yaml.safe_load(student)
         student_data = contents
 
     num_posts = 0
@@ -137,7 +137,7 @@ def participant_page(year, term, username):
     yaml_dir = app_path('people')
     participant_yaml = os.path.join(yaml_dir, year, term, username + '.yaml')
     with open(participant_yaml) as participant_file:
-        participant_data = yaml.load(participant_file)
+        participant_data = yaml.safe_load(participant_file)
 
     return render_template(
         'participant.mak', name='mako',
@@ -153,7 +153,7 @@ def resources():
     oer_links = []
     oer_yaml = app_path("oer.yaml")
     with open(oer_yaml) as oer_data:
-        oer_links = yaml.load(oer_data)
+        oer_links = yaml.safe_load(oer_data)
 
     res['links'] = {}
     res['Decks'] = []

@@ -57,7 +57,7 @@ def get_hw_keys():
 
     try:
         with open(key_file) as key_data:
-            keys = yaml.load(key_data)['hw']
+            keys = yaml.safe_load(key_data)['hw']
     except IOError:
         print "Error: File missing!" + key_file
     return keys

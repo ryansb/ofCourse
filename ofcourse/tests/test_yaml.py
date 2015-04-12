@@ -17,7 +17,7 @@ class TestAllYaml(unittest.TestCase):
         for fullname in yaml_files:
             with open(fullname, 'r') as yfile:
                 try:
-                    yaml.load(yfile)
+                    yaml.safe_load(yfile)
                 except Exception as e:
                     msg = "File {name} is broken: {exc}"
                     self.fail(msg.format(name=fullname, exc=str(e)))
@@ -47,7 +47,7 @@ class TestAllYaml(unittest.TestCase):
 
         for fullname in student_files:
             with open(fullname, 'r') as student:
-                content = yaml.load(student)
+                content = yaml.safe_load(student)
                 validity = validate(spec, content)
                 if not validity[0]:
                     out = ""

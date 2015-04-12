@@ -80,7 +80,7 @@ def participants(root_dir):
         for fname in sorted(files):
             if fname.endswith('.yaml'):
                 with open(dirpath + '/' + fname) as students:
-                    contents = yaml.load(students)
+                    contents = yaml.safe_load(students)
                     contents['yaml'] = dirpath + '/' + fname
                     year_term_data = dirpath.split('/')
                     contents['participant_page'] = "{y}/{t}/{u}".format(

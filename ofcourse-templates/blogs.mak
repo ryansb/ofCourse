@@ -56,7 +56,7 @@
         </a>
         <div class="panel-body">
           <a class="avatar-link" href="${student['participant_page']}">
-            <img class="uglymug pull-left" src="${gravatar(student.get('avatar', student['rit_dce'] + '@rit.edu'))}" alt="${student['irc']}'s Avatar" />
+            <img class="uglymug pull-left" src="${gravatar(student, 'rit_dce', '@rit.edu')}" alt="${student['irc']}'s Avatar" />
           </a>
           <div class="item blog clearfix">
             <a target="_blank" href="${student['blog']}">Blog</a>

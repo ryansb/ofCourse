@@ -12,7 +12,7 @@ body {
     padding-bottom: 40px;
 }
 
-a {
+a, .alert code>a {
     color: #303f9f;
 }
 

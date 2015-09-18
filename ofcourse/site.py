@@ -16,10 +16,10 @@ from datetime import datetime
 # flask dependencies
 from flask import Flask
 from flask import jsonify
-from flask.ext.mako import MakoTemplates, render_template
 from werkzeug.exceptions import NotFound
 
 # ofcourse
+from .render import render_init, render_template
 from ofcourse.util import count_posts, app_path
 from ofcourse.blueprints import homework, lectures, quizzes
 from ofcourse.participants import participants_bp
@@ -28,7 +28,7 @@ app = Flask(__name__)
 app.static_folder = app_path("static")
 app.templates_folder = app_path("templates")
 app.people_folder = app_path("people")
-mako = MakoTemplates(app)
+render_init(app)
 
 
 # Automatically include site config
@@ -78,13 +78,13 @@ def gravatar(person_data, fallback_key, fallback_suffix):
 @app.route('/<page>')
 def simple_page(page):
     """
-    Render a simple page. Looks for a .mak template file
+    Render a simple page. Looks for a template file
     with the name of the page parameter that was passed in.
     By default, this just shows the homepage.
 
     """
 
-    return render_template('{}.mak'.format(page), name='mako')
+    return render_template(page)
 
 
 @app.route('/syllabus')
@@ -94,7 +94,7 @@ def syllabus():
 
     """
 
-    return render_template('syllabus.mak', name='mako')
+    return render_template('syllabus')
 
 
 @app.route('/blog/<year>/<term>/<username>')
@@ -140,7 +140,7 @@ def participant_page(year, term, username):
         participant_data = yaml.safe_load(participant_file)
 
     return render_template(
-        'participant.mak', name='mako',
+        'participant',
         participant_data=participant_data,
         gravatar=gravatar
     )
@@ -175,7 +175,7 @@ def resources():
     if 'videos' in oer_links:
         res['links']['videos'] = oer_links['videos']
 
-    return render_template('resources.mak', name='mako', resources=res)
+    return render_template('resources', resources=res)
 
 
 app.register_blueprint(homework, url_prefix='/assignments')

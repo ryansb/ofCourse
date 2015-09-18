@@ -5,10 +5,10 @@ from urlparse import urlparse
 import yaml
 
 from flask import Blueprint, redirect
-from flask.ext.mako import render_template
 
 import ofcourse
-from ofcourse.util import app_path, get_hw_keys
+from .util import app_path, get_hw_keys
+from .render import render_template
 
 participants_bp = Blueprint('participants_bp',
                             __name__,
@@ -105,7 +105,7 @@ def participants(root_dir):
                         len(assignments))
 
     return render_template(
-        'blogs.mak', name='mako',
+        'blogs',
         student_data=student_data,
         gravatar=ofcourse.site.gravatar,
         target_number=target_number,

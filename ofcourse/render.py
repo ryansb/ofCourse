@@ -31,8 +31,8 @@ def render_template(template, **kwargs_raw):
     Default to Jinja2 templates, fallback to mako
     '''
     templates = [
-        (flask.render_template, ".html", {'name': 'mako'}, TemplateNotFound),
-        (mako.render_template, ".mak", {}, TopLevelLookupException),
+        (flask.render_template, ".html", {}, TemplateNotFound),
+        (mako.render_template, ".mak", {'name': 'mako'}, TopLevelLookupException),
     ]
     for render, suff, keys, ex in templates:
         try:

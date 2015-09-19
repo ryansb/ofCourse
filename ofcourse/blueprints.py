@@ -1,4 +1,6 @@
+from __future__ import print_function
 import os
+from itertools import chain
 
 from flask import Blueprint
 
@@ -18,22 +20,25 @@ quizzes = Blueprint('quizzes', __name__,
 @homework.route('/<page>')
 def display_homework(page):
     if page == 'index':
-        hws = os.listdir(app_path('static', 'hw'))
-        hws.extend(os.listdir(app_path('templates', 'hw')))
-        hws = [hw for hw in sorted(hws)
-               if os.path.splitext(hw)[0] == "index"]
+        hws = [(hw, os.path.join('/static', 'hw'))
+               for hw in os.listdir(app_path('static', 'hw'))]
+        hws.extend([(os.path.splitext(hw)[0], '/hw')
+                    for hw in os.listdir(app_path('templates', 'hw'))])
+        hws = {os.path.basename(hw): os.path.join(loc, hw)
+               for hw, loc in hws
+               if os.path.splitext(os.path.basename(hw))[0] != "index"}
     else:
         hws = None
 
-    return render_template(os.path.join('hw', page), hws=hws)
+    return render_template(os.path.join("hw", page), hws=hws, os=os)
 
 
 @lectures.route('/', defaults={'page': 'index'})
 @lectures.route('/<page>')
 def display_lecture(page):
     if page == 'index':
-        lecture_notes = os.listdir(app_path('templates', 'lectures'))
-        lecture_notes = [note for note in sorted(lecture_notes)
+        lecture_notes = [(note, os.path.splitext(os.path.join("/lectures", note))[0])
+                         for note in sorted(os.listdir(app_path('templates', 'lectures')))
                          if os.path.splitext(note)[0] != "index"]
     else:
         lecture_notes = None

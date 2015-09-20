@@ -1,32 +1,28 @@
-<%inherit file="../master.mak" />
+{% extends "master.html" %}
 
-<div class="jumbotron">
+{% block jumbotron %}
     <h1>First Flight</h1>
-</div>
+{% endblock %}
 
-<p>
-The purpose of this homework assignment is to introduce students to their first
-FLOSS practices. Read it in full, there are a number of graded deliverables.
-</p>
+{% block body %}
+  <p>The purpose of this homework assignment is to introduce
+  students to their first FLOSS practices. Read it in full, there
+  are a number of graded deliverables.</p>
 
-The due-date is listed in the Syllabus.
+  <p>The due-date is listed in the Syllabus.</p>
 
-<h2>IRC</h2>
+  <h2>IRC</h2>
 
-<p>
-IRC is one of the primary means of communication for a FOSS community,
-particularly for informal communication.
-</p>
+  <p>IRC is one of the primary means of communication for a FOSS
+  community, particularly for informal communication.</p>
 
-<p>
-There is a course IRC channel on irc.freenode.net. The channel is
-#rit-foss. Communicating regularly in IRC factors into the FOSS Dev
-Practices component of your final grade.
-</p>
+  <p>There is a course IRC channel on irc.freenode.net. The channel
+  is #rit-foss. Communicating regularly in IRC factors into the
+  FOSS Dev Practices component of your final grade.</p>
 
-<div class="alert alert-success">
-
+  <div class="alert alert-success">
     <h3 class="label label-success">Tasks:</h3>
+
     <ul class="first last simple">
         <li>Download and install an IRC client on your development machine.
           <ul>
@@ -56,8 +52,7 @@ the NickServ</a>.</li>
           </ul>
         </li>
     </ul>
-
-</div>
+  </div>
 
 <p>
 It is a good practice to “hang out” in IRC channels of projects that you use
@@ -242,4 +237,5 @@ forge.
             should add your blog feed to the <a href="${course['public_url']}/participants">Participants</a> page.)</li>
         </ul>
     </div>
-</div>
+  </div>
+{% endblock %}

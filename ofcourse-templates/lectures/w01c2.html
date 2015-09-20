@@ -1,30 +1,32 @@
-<%inherit file="../master.mak" />
+{% extends "master.html" %}
 
-<div class="jumbotron">
+{% block jumbotron %}
     <h1>W1C2</h1>
     <p>Week 1 - Class 2</p>
-</div>
+{% endblock %}
 
-<div>
+{% block body %}
+  <div>
     <h2>Agenda:</h2>
+
     <ol class="lecture_list">
-        <li>
-            <h3>Welcome</h3>
+      <li>
+        <h3>Welcome</h3>
 
-            <ul class="list-unstyled">
-                <li class="alert alert-success">/whois decause</li>
-            </ul>
-        </li>
+        <ul class="list-unstyled">
+          <li class="alert alert-success">/whois decause</li>
+        </ul>
+      </li>
 
-        <li>
-            <h3>RollCall</h3>
-            <ul class="alert alert-success list-unstyled">
-                <li><h4>Name</h4></li>
-                <li><h4>Year/Major</h4></li>
-                <li><h4>Weapon Of Choice</h4></li>
-                <li><h4>Favorite Game</h4></li>
-            </ul>
-        </li>
+      <li>
+        <h3>RollCall</h3>
+        <ul class="alert alert-success list-unstyled">
+          <li><h4>Name</h4></li>
+          <li><h4>Year/Major</h4></li>
+          <li><h4>Weapon Of Choice</h4></li>
+          <li><h4>Favorite Game</h4></li>
+        </ul>
+      </li>
 
         <li>
             <h3>Review Hackathon Schedule</h3>
@@ -43,4 +45,5 @@
         </li>
 
     </ol>
-</div>
+  </div>
+{% endblock %}

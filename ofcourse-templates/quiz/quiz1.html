@@ -1,15 +1,17 @@
-<%inherit file="../master.mak"/>
+{% extends "../master.html" %}
 
-<div class="jumbotron">
+{% block jumbotron %}
     <h1>TOSW</h1>
     <p>The Success of Open Source &amp; The Open Source Way</p>
 </div>
 
-    <p>In Chapter 3 of Stephen Weber's <em>The Success of Open Source</em>,
-    there was a listing of eight "General Principles" contained within the
-    chapter. Last week, we discussed in class the five pillars of <a
-    target="_blank" href="http://opensource.com/open-source-way">"The Open
-    Source Way."</a></p>
+{% block body %}
+<p>
+In Chapter 3 of Stephen Weber's <em>The Success of Open Source</em>, there was
+a listing of eight "General Principles" contained within the chapter.  Last
+week, we discussed in class the five pillars of <a target="_blank"
+href="http://opensource.com/open-source-way">"The Open Source Way."</a>
+</p>
 
 
 <ol>
@@ -17,11 +19,12 @@
     <li>What are the titles of each General Principle?</li>
     <li>What are the similarities between Weber's eight principles, and the five pillars?</li>
     <li>What are the differences?</li>
-    <li><span class="label label-info">Bonus:</span> Who's "keen analysis" did Weber "Draw Heavily" upon?"</li>
-    <li><span class="label label-success">Double-Bonus:</span> What was the title of this "keen analysis." (Hint: Weber
-    hinted at the title when he was talking about Cathedrals earlier in the
-    chapter.)</li>
-    <li><span class="label label-warning">Triple-Bonus:</span> Where can this keen analysis be found? (Answer in URL form, i.e. <code>http://placeofkeenanalysisis.com/analysis</code>)</li>
+    <li><span class="label label-info">Bonus:</span> Whose "keen analysis" did Weber "Draw Heavily" upon?"</li>
+    <li><span class="label label-success">Double-Bonus:</span>
+        What was the title of this "keen analysis."
+		(Hint: Weber hinted at the title when he was talking about Cathedrals earlier in the chapter.)</li>
+    <li><span class="label label-warning">Triple-Bonus:</span>
+		Where can this keen analysis be found? (Answer in URL form, i.e. <code>http://placeofkeenanalysisis.com/analysis</code>)</li>
 </ol>
 
 <div class="alert alert-info">

@@ -37,8 +37,11 @@ def display_homework(page):
 @lectures.route('/<page>')
 def display_lecture(page):
     if page == 'index':
-        lecture_notes = [(note, os.path.splitext(os.path.join("/lectures", note))[0])
-                         for note in sorted(os.listdir(app_path('templates', 'lectures')))
+        def get_loc(p):
+            return os.path.splitext(os.path.join("/lectures", note))[0]
+        lecs = os.listdir(app_path('templates', 'lectures'))
+        lecture_notes = [(note, get_loc(note))
+                         for note in sorted(lecs)
                          if os.path.splitext(note)[0] != "index"]
     else:
         lecture_notes = None

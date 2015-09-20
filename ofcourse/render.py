@@ -32,7 +32,8 @@ def render_template(template, **kwargs_raw):
     '''
     templates = [
         (flask.render_template, ".html", {}, TemplateNotFound),
-        (mako.render_template, ".mak", {'name': 'mako'}, TopLevelLookupException),
+        (mako.render_template, ".mak",
+            {'name': 'mako'}, TopLevelLookupException),
     ]
     for render, suff, keys, ex in templates:
         try:

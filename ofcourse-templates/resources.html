@@ -12,8 +12,8 @@
         {% for res in res_list %}
           <li><a href="/static/{{res_type|lower}}/{{res}}"> {{res}}</a></li>
         {% endfor %}
-        {% if res_type.lower() in resources['links'] %}
-	      {% for res_name, res in resources['links'][res_type.lower()].items() %}
+        {% if res_type.lower() in resources.links %}
+	      {% for res_name, res in resources.links[res_type.lower()].items() %}
             <li><a href="{{res}}">{{res_name|replace("_", " ")}}</a></li>
           {% endfor %}
         {% endif %}

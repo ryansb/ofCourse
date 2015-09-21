@@ -40,27 +40,27 @@
 {% endblock %}
 {% macro student_block(student) %}
     <div class="col-sm-4">
-      <div class="student panel panel-info" data-student={{student['irc']}} data-feed={{student['participant_page']}}>
-        <a href="{{student['participant_page']}}">
+      <div class="student panel panel-info" data-student={{student.irc}} data-feed={{student.participant_page}}>
+        <a href="{{student.participant_page}}">
           <div class="panel-heading withripple">
-            <h4 class="item panel-title">{{student['irc']}}</h4>
+            <h4 class="item panel-title">{{student.irc}}</h4>
           </div>
         </a>
         <div class="panel-body">
-          <a class="avatar-link" href="{{student['participant_page']}}">
-            <img class="uglymug pull-left" src="{{gravatar(student, 'rit_dce', '@rit.edu')}}" alt="{{student['irc']}}'s Avatar" />
+          <a class="avatar-link" href="{{student.participant_page}}">
+            <img class="uglymug pull-left" src="{{gravatar(student, 'rit_dce', '@rit.edu')}}" alt="{{student.irc}}'s Avatar" />
           </a>
           <div class="item blog clearfix">
-            <a target="_blank" href="{{student['blog']}}">Blog</a>
-            <span class="label" id={{student['irc']}}></span>
+            <a target="_blank" href="{{student.blog.}}">Blog</a>
+            <span class="label" id={{student.irc.}}></span>
           </div>
         <ul class="cardlist list-unstyled">
-          {% for forge_link in student['forges'] %}
+          {% for forge_link in studentforges %}
             <li><a target="_blank" href="{{forge_link}}">{{forge_link}}</a></li>
           {% endfor %}
 
-          {% set hw = student['hw']|default({}) %}
-          {% if student['isActive'] %}
+          {% set hw = student.hw|default({}) %}
+          {% if student.isActive %}
             {% for key in hw_keys %}
                 {% if key in hw %}
                   <li><a target="_blank" href="{{hw[key]}}">{{key}}</a></li>
@@ -77,7 +77,7 @@
           {#
            # This block used for quick grading reference ;)
             {% if student.get('name') %}
-              <li>{{student['name']}}</li>
+              <li>{{student.name}}</li>
             {% endif %}
           #}
         </ul>

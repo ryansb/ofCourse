@@ -50,21 +50,21 @@
 {% block body %}
 <div class="section">
   <a class="headerlink" name="course-info"></a>
-  <h2>{{course['desc']}}</h2>
+  <h2>{{course.desc}}</h2>
   <blockquote>
     <div>
       <ul class="list-unstyled">
-        <li><b>Instructor</b> - {{instructor['name']}} &lt;<a class="" href="mailto:{{instructor['email']}}">{{instructor['email']}}</a>&gt;</li>
-        <li><b>Office:</b> {{instructor['office']['location']}}</li>
-        <li><b>Office Hours:</b> {{instructor['office']['hours']}}</li>
+        <li><b>Instructor</b> - {{instructor.name}} &lt;<a class="" href="mailto:{{instructor.email}}">{{instructor.email}}</a>&gt;</li>
+        <li><b>Office:</b> {{instructor.office.location}}</li>
+        <li><b>Office Hours:</b> {{instructor.office.hours}}</li>
         {% if assistant: %}
-        <li><b>Teaching Assistant</b> - {{assistant['name']}} &lt;<a class="" href="mailto:{{assistant['email']}}">{{assistant['email']}}</a>&gt;</li>
+        <li><b>Teaching Assistant</b> - {{assistant.name}} &lt;<a class="" href="mailto:{{assistant.email}}">{{assistant.email}}</a>&gt;</li>
         {% endif %}
         <li><b>IRC</b> - irc.freenode.net, <span class="docutils literal" style="font-family: monospace;"><span class="pre">#rit-foss</span></span></li>
         <!-- li><b>Blog Planet</b> - <a class="" href="http://foss.rit.edu/planet">http://foss.rit.edu/planet</a></li -->
       </ul>
         The source for this syllabus can be found at
-        <a href="{{course['repo']}}">{{course['repo']}}</a>
+        <a href="{{course.repo}}">{{course.repo}}</a>
 
     </div>
   </blockquote>
@@ -101,15 +101,17 @@
   course is intended to be both <cite>open</cite> and <cite>fun</cite>.</p>
   <p>An <cite>open</cite> course &#8211; students will have access to the &#8216;document source&#8217; for the
   syllabus. While you are reading <cite>the syllabus</cite> right now,
-  as a student of the class you have a right to <a class="" href="{{course['repo']}}">fork the upstream repository</a>, make modifications, and submit patches for review. Barring a troll festival, this can create a fun,
+  as a student of the class you have a right to
+  <a class="" href="{{course.repo}}">fork the upstream repository</a>, make modifications,
+  and submit patches for review. Barring a troll festival, this can create a fun,
   dynamic environment in which the course curriculum can develop by the very same
   mechanism being taught during the semester (community-driven).</p>
 </div>
 <div class="section">
   <a class="headerlink" name="licensing"></a>
   <h2>Licensing</h2>
-  <p>All code developed by students in the course must be licensed (by the student)
-  under any one of the <a class="" href="http://www.opensource.org/licenses/category">licenses approved by the Open Source Initiative</a>.</p>
+  <p>All code developed by students in the course must be licensed (by the student) under any one of the
+  <a class="" href="http://www.opensource.org/licenses/category">licenses approved by the Open Source Initiative</a>.</p>
   <p>Code that you write is <strong>your</strong> code, with which you can do what you will;
   true. However, if you&#8217;re unwilling to license code you write for an Free/Open Source
   course with a Free/Open Source license, you may be in the wrong course.</p>

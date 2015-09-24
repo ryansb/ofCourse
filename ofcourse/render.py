@@ -52,7 +52,7 @@ try:
     _renderer_classes.append(make_renderer(
         mako.render_template, ".mak", TopLevelLookupException,
         init=mako.MakoTemplates,
-        params={'name', 'mako'},
+        params={'name': 'mako'},
         config={'MAKO_TRANSLATE_EXCEPTIONS': False}))
 except ImportError:
     # Mako extensions don't exist

@@ -14,7 +14,7 @@ import uuid
 import requests
 import time
 import oshift
-from StringIO import StringIO
+from six.moves import StringIO
 import dulwich.porcelain as git
 
 

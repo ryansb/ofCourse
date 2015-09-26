@@ -1,7 +1,7 @@
 import os
 
 from datetime import datetime, date, timedelta
-from urlparse import urlparse
+from six.moves.urllib.parse import urlparse
 import yaml
 
 from flask import Blueprint, redirect

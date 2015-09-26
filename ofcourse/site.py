@@ -109,7 +109,7 @@ def blog_posts(year, term, username):
 
     fname = os.path.join(app.people_folder, year, term, username) + ".yaml"
 
-    print "Getting blog count for: " + fname
+    print("Getting blog count for: " + fname)
     with open(fname) as student:
         contents = yaml.safe_load(student)
         student_data = contents

@@ -21,7 +21,7 @@
 
 {% macro topic_cell(values) %}
   <td>
-    {% for name, link in values.iteritems() %}
+    {% for name, link in values.items() %}
       {% if link %}
       <p class="topic "><a target="_blank" href="{{link}}">{{name|safe}}</a></p>
       {% else %}

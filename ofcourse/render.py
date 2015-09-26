@@ -1,5 +1,6 @@
 """
-Author: Remy D <remyd@civx.us>
+Author: Matt Soucy <msoucy@csh.rit.edu>
+        Remy D <remyd@civx.us>
         Ralph Bean <rbean@redhat.com>
         Sam Lucidi <mansam@csh.rit.edu>
 License: Apache 2.0
@@ -14,7 +15,7 @@ import flask
 
 # Renderers {{{
 # Renderer template {{{
-def make_renderer(render, suffix, exception, init=None, config={}, params={}):
+def make_renderer(render, suffixes, exception, init=None, config={}, params={}):
     class Renderer(object):
         def __init__(self, app):
             ''' Perform required setup '''
@@ -24,12 +25,13 @@ def make_renderer(render, suffix, exception, init=None, config={}, params={}):
 
         def __call__(self, template, **kwargs_raw):
             ''' Attempt to render '''
-            try:
-                kwargs = kwargs_raw.copy()
-                kwargs.update(params)
-                return render(template + suffix, **kwargs)
-            except exception:
-                pass
+            kwargs = kwargs_raw.copy()
+            kwargs.update(params)
+            for suffix in suffixes:
+                try:
+                    return render(template + suffix, **kwargs)
+                except exception:
+                    pass
     return Renderer
 # }}}
 
@@ -39,7 +41,7 @@ _renderer_classes = []
 try:
     import jinja2
     _renderer_classes.append(make_renderer(
-        flask.render_template, ".html", jinja2.TemplateNotFound))
+        flask.render_template, (".html", ".htm"), jinja2.TemplateNotFound))
 except ImportError:
     # Somehow, jinja isn't supported
     pass
@@ -50,7 +52,7 @@ try:
     import flask.ext.mako as mako
     from mako.exceptions import TopLevelLookupException
     _renderer_classes.append(make_renderer(
-        mako.render_template, ".mak", TopLevelLookupException,
+        mako.render_template, (".mak", ".mako"), TopLevelLookupException,
         init=mako.MakoTemplates,
         params={'name': 'mako'},
         config={'MAKO_TRANSLATE_EXCEPTIONS': False}))

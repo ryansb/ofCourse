@@ -15,7 +15,8 @@ import flask
 
 # Renderers {{{
 # Renderer template {{{
-def make_renderer(render, suffixes, exception, init=None, config={}, params={}):
+def make_renderer(render, suffixes, exception,
+                  init=None, config={}, params={}):
     class Renderer(object):
         def __init__(self, app):
             ''' Perform required setup '''

@@ -59,3 +59,13 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Tox
+AUTHORS
+ChangeLog
+
+# PBR
+.eggs/
+
+# Virtualenvwrapper/VirtualFish
+.venv

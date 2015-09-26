@@ -20,34 +20,45 @@ quizzes = Blueprint('quizzes', __name__,
 @homework.route('/<page>')
 def display_homework(page):
     if page == 'index':
-        hws = [(hw, os.path.join('/static', 'hw'))
+        # Old way of generating list (for backwards compatibility)
+        hws = os.listdir(app_path('static', 'hw'))
+        hws.extend(os.listdir(app_path('templates', 'hw')))
+        hws = [hw for hw in sorted(hws) if not hw == "index.mak"]
+        # New, cleaner-in-the-template way to do it
+        hwd = [(hw, os.path.join('/static', 'hw'))
                for hw in os.listdir(app_path('static', 'hw'))]
-        hws.extend([(os.path.splitext(hw)[0], '/hw')
+        hwd.extend([(os.path.splitext(hw)[0], '/hw')
                     for hw in os.listdir(app_path('templates', 'hw'))])
-        hws = {os.path.basename(hw): os.path.join(loc, hw)
-               for hw, loc in hws
+        hwd = {os.path.basename(hw): os.path.join(loc, hw)
+               for hw, loc in hwd
                if os.path.splitext(os.path.basename(hw))[0] != "index"}
     else:
         hws = None
+        hwd = None
 
-    return render_template(os.path.join("hw", page), hws=hws, os=os)
+    return render_template(os.path.join("hw", page),
+                           hws=hws, os=os, assignments=hwd)
 
 
 @lectures.route('/', defaults={'page': 'index'})
 @lectures.route('/<page>')
 def display_lecture(page):
     if page == 'index':
-        def get_loc(p):
-            return os.path.splitext(os.path.join("/lectures", note))[0]
-        lecs = os.listdir(app_path('templates', 'lectures'))
-        lecture_notes = [(note, get_loc(note))
-                         for note in sorted(lecs)
-                         if os.path.splitext(note)[0] != "index"]
+        lecture_list = os.listdir(app_path('templates', 'lectures'))
+        # Old way of generating list (for backwards compatibility)
+        lectures = [note for note in sorted(lecture_list)
+                    if note != "index.mak"]
+        # New, cleaner-in-the-template way to do it
+        lecture_notes = [
+                (note, os.path.splitext(os.path.join("/lectures", note))[0])
+                for note in sorted(lecture_list)
+                if os.path.splitext(note)[0] != "index"]
     else:
         lecture_notes = None
+        lectures = None
 
     return render_template(os.path.join('lectures', page),
-                           lectures=lecture_notes)
+                           lecture_notes=lecture_notes, lectures=lectures)
 
 
 @quizzes.route('/<quiz_num>')

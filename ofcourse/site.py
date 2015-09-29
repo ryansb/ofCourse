@@ -47,7 +47,6 @@ def inject_yaml():
         site_config['course']['public_url'] = course_url
     return site_config
 
-app.config['MAKO_TRANSLATE_EXCEPTIONS'] = False
 config = inject_yaml()
 COURSE_START = datetime.combine(config['course']['start'], datetime.min.time())
 COURSE_END = datetime.combine(config['course']['end'], datetime.max.time())

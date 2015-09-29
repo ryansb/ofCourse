@@ -93,7 +93,8 @@ def render_init(app):
     '''
     Set up all renderers and filters for a provided class
     '''
-    _renderers[:] = []
+    global renderers
+    _renderers = []
     for cls in _renderer_classes:
         _renderers.append(cls(app))
     for name, filt in _filters:

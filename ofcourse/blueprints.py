@@ -1,6 +1,5 @@
 from __future__ import print_function
 import os
-from itertools import chain
 
 from flask import Blueprint
 
@@ -50,9 +49,9 @@ def display_lecture(page):
                     if note != "index.mak"]
         # New, cleaner-in-the-template way to do it
         lecture_notes = [
-                (note, os.path.splitext(os.path.join("/lectures", note))[0])
-                for note in sorted(lecture_list)
-                if os.path.splitext(note)[0] != "index"]
+            (note, os.path.splitext(os.path.join("/lectures", note))[0])
+            for note in sorted(lecture_list)
+            if os.path.splitext(note)[0] != "index"]
     else:
         lecture_notes = None
         lectures = None

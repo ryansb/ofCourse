@@ -20,6 +20,9 @@ from werkzeug.exceptions import NotFound
 
 # ofcourse
 from .render import render_init, render_template
+from .cal import (
+    load_calendar, normalize_categories, calendar_weeks,
+    assignment_data, items_assigned, items_due)
 from ofcourse.util import count_posts, app_path
 from ofcourse.blueprints import homework, lectures, quizzes
 from ofcourse.participants import participants_bp
@@ -93,7 +96,14 @@ def syllabus():
 
     """
 
-    return render_template('syllabus')
+    return render_template(
+        'syllabus',
+        load_calendar=load_calendar,
+        normalize_categories=normalize_categories,
+        calendar_weeks=calendar_weeks,
+        assignment_data=assignment_data,
+        items_assigned=items_assigned,
+        items_due=items_due)
 
 
 @app.route('/blog/<year>/<term>/<username>')

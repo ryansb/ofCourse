@@ -31,7 +31,7 @@ def calendar_weeks(cal):
     def week_num(ev):
         ' Simplest way without lots of string (un-)formatting '
         return ev.decoded('dtstart').isocalendar()[1]
-    return list(list(wk[1]) for wk in groupby(sorted_events(cal), week_num))
+    return [list(wk[1]) for wk in groupby(sorted_events(cal), week_num)]
 
 assignment_re = re.compile(r"^(ASSIGNED|DUE): (.*)\w*(?:<(.*)>)")
 def assignment_data(desc):

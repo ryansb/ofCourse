@@ -27,7 +27,7 @@
 
 {% macro class_period(n, ev) %}
   <td class="sessionnumber">{{n}}</td>
-  <td>{{ev.decoded('dtstart').strftime("%m/%d")}}</td>
+  <td>{{ev.decoded('dtstart').strftime("%x")}}</td>
   {{title_cell(ev)}}
   {% set assignments = assignment_data(ev.get('description','')) %}
   {{ assignment_cell(items_assigned(assignments)) }}
@@ -37,7 +37,7 @@
 {% macro hackathon(ev) %}
   <td class="sessionnumber">***</td>
   <td>
-    {{ev.decoded('dtstart').strftime("%m/%d %H:%M")}} - {{ev.decoded('dtend').strftime("%m/%d %H:%M")}}
+    {{ev.decoded('dtstart').strftime("%x %X")}} - {{ev.decoded('dtend').strftime("%x %X")}}
   </td>
   {{title_cell(ev)}}
   <td>{{ev.decoded('location')|default("")}}</td>

@@ -14,11 +14,9 @@ def load_calendar(fn):
     with open(fn) as infile:
         return Calendar.from_ical(infile.read())
 
-def calendar_events(cal):
-    return filter(lambda ev: type(ev) == Event, cal.subcomponents)
-
 def sorted_events(cal):
-    return sorted(calendar_events(cal), key=lambda ev: ev.decoded('dtstart'))
+    return sorted([ev for ev in cal.subcomponents if type(ev) == Event],
+                  key=lambda ev: ev.decoded('dtstart'))
 
 def normalize_categories(ev):
     ' Return an array of categories, all the time '

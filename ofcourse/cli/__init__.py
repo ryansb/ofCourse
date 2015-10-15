@@ -80,7 +80,8 @@ def new():
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(yamls_dir, 'oer.yaml'),
                         os.getcwd(), update=True)
-    file_util.copy_file(os.path.join(yamls_dir, 'course.ics'),
+
+    file_util.copy_file(os.path.join(source_dir, 'course.ics'),
                         os.getcwd(), update=True)
     file_util.copy_file(os.path.join(source_dir, ".travis.yml"),
                         os.getcwd(), update=True)

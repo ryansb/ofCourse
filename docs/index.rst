@@ -8,6 +8,8 @@ Welcome to ofcourse's documentation!
 
 :doc:`start`
 
+:doc:`calendar`
+
 :doc:`internals`
 
 

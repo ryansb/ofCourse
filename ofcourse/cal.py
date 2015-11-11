@@ -14,10 +14,18 @@ def load_calendar(fn):
     with open(fn) as infile:
         return Calendar.from_ical(infile.read())
 
+def event_start_time(ev):
+    '''
+    Get the start time of an event
+    Handle "all-day" events
+    '''
+    from datetime import datetime
+    return datetime.fromordinal(ev.decoded('dtstart').toordinal())
+
 def sorted_events(cal):
     ' Organize the relevant events from the calendar '
     return sorted([ev for ev in cal.subcomponents if type(ev) == Event],
-                  key=lambda ev: ev.decoded('dtstart'))
+                  key=event_start_time)
 
 def normalize_categories(ev):
     ' Always return an array of categories '

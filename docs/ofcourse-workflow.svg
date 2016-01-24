@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="990"
+   height="765"
+   viewBox="69 21 558.8 431.80001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ofcourse-workflow.svg">
+  <metadata
+     id="metadata250">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs248" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="725"
+     id="namedview246"
+     showgrid="false"
+     showborder="true"
+     inkscape:zoom="0.18160386"
+     inkscape:cx="825.97361"
+     inkscape:cy="425.19684"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g4"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 354.7,415 127.55,0 c 17.611,0 31.888,17.237 31.888,38.5 0,21.263 -14.277,38.5 -31.888,38.5 l -127.55,0 c -17.611,0 -31.887,-17.237 -31.887,-38.5 0,-21.263 14.276,-38.5 31.887,-38.5 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 354.7,415 127.55,0 c 17.611,0 31.888,17.237 31.888,38.5 0,21.263 -14.277,38.5 -31.888,38.5 l -127.55,0 c -17.611,0 -31.887,-17.237 -31.887,-38.5 0,-21.263 14.276,-38.5 31.887,-38.5"
+       id="path8"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="418.47501"
+       y="449.5"
+       id="text10">
+      <tspan
+         x="418.47501"
+         y="449.5"
+         id="tspan12">decause/bizlegfoss</tspan>
+      <tspan
+         x="418.47501"
+         y="465.5"
+         id="tspan14">public Github</tspan>
+    </text>
+  </g>
+  <g
+     id="g16"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 138.233,414.4 113.334,0 c 15.648,0 28.333,19.252 28.333,43 0,23.748 -12.685,43 -28.333,43 l -113.334,0 c -15.648,0 -28.333,-19.252 -28.333,-43 0,-23.748 12.685,-43 28.333,-43 z"
+       id="path18"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 138.233,414.4 113.334,0 c 15.648,0 28.333,19.252 28.333,43 0,23.748 -12.685,43 -28.333,43 l -113.334,0 c -15.648,0 -28.333,-19.252 -28.333,-43 0,-23.748 12.685,-43 28.333,-43"
+       id="path20"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="194.89999"
+       y="437.39999"
+       id="text22">
+      <tspan
+         x="194.89999"
+         y="437.39999"
+         id="tspan24">ryansb/ofcourse</tspan>
+      <tspan
+         x="194.89999"
+         y="453.39999"
+         id="tspan26">public Github</tspan>
+      <tspan
+         x="194.89999"
+         y="469.39999"
+         id="tspan28">or</tspan>
+      <tspan
+         x="194.89999"
+         y="485.39999"
+         id="tspan30">pip install</tspan>
+    </text>
+  </g>
+  <g
+     id="g32"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 607.35,220.35 131,0 c 18.087,0 32.75,17.237 32.75,38.5 0,21.263 -14.663,38.5 -32.75,38.5 l -131,0 c -18.087,0 -32.75,-17.237 -32.75,-38.5 0,-21.263 14.663,-38.5 32.75,-38.5 z"
+       id="path34"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 607.35,220.35 131,0 c 18.087,0 32.75,17.237 32.75,38.5 0,21.263 -14.663,38.5 -32.75,38.5 l -131,0 c -18.087,0 -32.75,-17.237 -32.75,-38.5 0,-21.263 14.663,-38.5 32.75,-38.5"
+       id="path36"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="672.84998"
+       y="254.85001"
+       id="text38">
+      <tspan
+         x="672.84998"
+         y="254.85001"
+         id="tspan40">student1/bizlegfoss</tspan>
+      <tspan
+         x="672.84998"
+         y="270.85001"
+         id="tspan42">public Github</tspan>
+    </text>
+  </g>
+  <g
+     id="g44"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 607.35,333.35 131,0 c 18.087,0 32.75,17.237 32.75,38.5 0,21.263 -14.663,38.5 -32.75,38.5 l -131,0 c -18.087,0 -32.75,-17.237 -32.75,-38.5 0,-21.263 14.663,-38.5 32.75,-38.5 z"
+       id="path46"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 607.35,333.35 131,0 c 18.087,0 32.75,17.237 32.75,38.5 0,21.263 -14.663,38.5 -32.75,38.5 l -131,0 c -18.087,0 -32.75,-17.237 -32.75,-38.5 0,-21.263 14.663,-38.5 32.75,-38.5"
+       id="path48"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="672.84998"
+       y="367.85001"
+       id="text50">
+      <tspan
+         x="672.84998"
+         y="367.85001"
+         id="tspan52">student2/bizlegfoss</tspan>
+      <tspan
+         x="672.84998"
+         y="383.85001"
+         id="tspan54">public Github</tspan>
+    </text>
+  </g>
+  <g
+     id="g56"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 846.183,220.35 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5 z"
+       id="path58"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 846.183,220.35 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5"
+       id="path60"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="902.84998"
+       y="254.85001"
+       id="text62">
+      <tspan
+         x="902.84998"
+         y="254.85001"
+         id="tspan64">student1</tspan>
+      <tspan
+         x="902.84998"
+         y="270.85001"
+         id="tspan66">local git repo</tspan>
+    </text>
+  </g>
+  <g
+     id="g68"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 336.65,262.9 163.65,0 c 22.595,0 40.913,17.237 40.913,38.5 0,21.263 -18.318,38.5 -40.913,38.5 l -163.65,0 c -22.595,0 -40.912,-17.237 -40.912,-38.5 0,-21.263 18.317,-38.5 40.912,-38.5 z"
+       id="path70"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 336.65,262.9 163.65,0 c 22.595,0 40.913,17.237 40.913,38.5 0,21.263 -18.318,38.5 -40.913,38.5 l -163.65,0 c -22.595,0 -40.912,-17.237 -40.912,-38.5 0,-21.263 18.317,-38.5 40.912,-38.5"
+       id="path72"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="418.47501"
+       y="297.39999"
+       id="text74">
+      <tspan
+         x="418.47501"
+         y="297.39999"
+         id="tspan76">instructor/bizlegfoss</tspan>
+      <tspan
+         x="418.47501"
+         y="313.39999"
+         id="tspan78">public Github</tspan>
+    </text>
+  </g>
+  <g
+     id="g80"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 846.183,333.35 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5 z"
+       id="path82"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 846.183,333.35 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5"
+       id="path84"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="902.84998"
+       y="367.85001"
+       id="text86">
+      <tspan
+         x="902.84998"
+         y="367.85001"
+         id="tspan88">student2</tspan>
+      <tspan
+         x="902.84998"
+         y="383.85001"
+         id="tspan90">local git repo</tspan>
+    </text>
+  </g>
+  <g
+     id="g92"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <rect
+       style="fill:#ffffff"
+       x="70"
+       y="23"
+       width="465"
+       height="152"
+       id="rect94" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x="70"
+       y="23"
+       width="465"
+       height="152"
+       id="rect96" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="302.5"
+       y="102.9"
+       id="text98">
+      <tspan
+         x="302.5"
+         y="102.9"
+         id="tspan100" />
+    </text>
+  </g>
+  <g
+     id="g102"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 117.075,60.5 155.65,0 c 21.491,0 38.913,17.237 38.913,38.5 0,21.263 -17.422,38.5 -38.913,38.5 l -155.65,0 c -21.4908,0 -38.9125,-17.237 -38.9125,-38.5 0,-21.263 17.4217,-38.5 38.9125,-38.5 z"
+       id="path104"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 117.075,60.5 155.65,0 c 21.491,0 38.913,17.237 38.913,38.5 0,21.263 -17.422,38.5 -38.913,38.5 l -155.65,0 c -21.4908,0 -38.9125,-17.237 -38.9125,-38.5 0,-21.263 17.4217,-38.5 38.9125,-38.5"
+       id="path106"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="194.89999"
+       y="87"
+       id="text108">
+      <tspan
+         x="194.89999"
+         y="87"
+         id="tspan110">ofcourse</tspan>
+      <tspan
+         x="194.89999"
+         y="103"
+         id="tspan112">local copy (virtualenv)</tspan>
+      <tspan
+         x="194.89999"
+         y="119"
+         id="tspan114">[dev optional]</tspan>
+    </text>
+  </g>
+  <g
+     id="g116"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 361.808,60.5 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5 z"
+       id="path118"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 361.808,60.5 113.334,0 c 15.648,0 28.333,17.237 28.333,38.5 0,21.263 -12.685,38.5 -28.333,38.5 l -113.334,0 c -15.648,0 -28.333,-17.237 -28.333,-38.5 0,-21.263 12.685,-38.5 28.333,-38.5"
+       id="path120"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="418.47501"
+       y="95"
+       id="text122">
+      <tspan
+         x="418.47501"
+         y="95"
+         id="tspan124">bizlegfoss repo</tspan>
+      <tspan
+         x="418.47501"
+         y="111"
+         id="tspan126">local git repo</tspan>
+    </text>
+  </g>
+  <g
+     id="g128"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <path
+       style="fill:#ffffff"
+       d="m 703.3,60.5 171.2,0 c 23.638,0 42.8,17.237 42.8,38.5 0,21.263 -19.162,38.5 -42.8,38.5 l -171.2,0 c -23.638,0 -42.8,-17.237 -42.8,-38.5 0,-21.263 19.162,-38.5 42.8,-38.5 z"
+       id="path130"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="m 703.3,60.5 171.2,0 c 23.638,0 42.8,17.237 42.8,38.5 0,21.263 -19.162,38.5 -42.8,38.5 l -171.2,0 c -23.638,0 -42.8,-17.237 -42.8,-38.5 0,-21.263 19.162,-38.5 42.8,-38.5"
+       id="path132"
+       inkscape:connector-curvature="0" />
+    <text
+       font-size="12.7998"
+       style="font-size:12.79979992px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;font-family:sans-serif"
+       x="788.90002"
+       y="87"
+       id="text134">
+      <tspan
+         x="788.90002"
+         y="87"
+         id="tspan136">bizlegfoss-foo.rhcloud.net</tspan>
+      <tspan
+         x="788.90002"
+         y="103"
+         id="tspan138">public website</tspan>
+      <tspan
+         x="788.90002"
+         y="119"
+         id="tspan140">(rhcloud.com)</tspan>
+    </text>
+  </g>
+  <g
+     id="g142"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="194.89999"
+       y1="413.431"
+       x2="194.89999"
+       y2="148.22"
+       id="line144" />
+    <polygon
+       style="fill:#000000"
+       points="194.9,140.72 199.9,150.72 194.9,148.22 189.9,150.72 "
+       id="polygon146" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="194.9,140.72 199.9,150.72 194.9,148.22 189.9,150.72 "
+       id="polygon148" />
+  </g>
+  <g
+     id="g150"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="536"
+       y1="99"
+       x2="650.758"
+       y2="99"
+       id="line152" />
+    <polygon
+       style="fill:#000000"
+       points="658.258,99 648.258,104 650.758,99 648.258,94 "
+       id="polygon154" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="658.258,99 648.258,104 650.758,99 648.258,94 "
+       id="polygon156" />
+  </g>
+  <g
+     id="g158"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="418.47501"
+       y1="414.138"
+       x2="418.47501"
+       y2="350.49799"
+       id="line160" />
+    <polygon
+       style="fill:#000000"
+       points="418.475,342.998 423.475,352.998 418.475,350.498 413.475,352.998 "
+       id="polygon162" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="418.475,342.998 423.475,352.998 418.475,350.498 413.475,352.998 "
+       id="polygon164" />
+  </g>
+  <g
+     id="g166"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="418.47501"
+       y1="261.90601"
+       x2="418.47501"
+       y2="148.23"
+       id="line168" />
+    <polygon
+       style="fill:#000000"
+       points="418.475,140.73 423.475,150.73 418.475,148.23 413.475,150.73 "
+       id="polygon170" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="418.475,140.73 423.475,150.73 418.475,148.23 413.475,150.73 "
+       id="polygon172" />
+  </g>
+  <g
+     id="g174"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="418.47501"
+       y1="138.494"
+       x2="418.47501"
+       y2="252.17"
+       id="line176" />
+    <polygon
+       style="fill:#000000"
+       points="418.475,259.67 413.475,249.67 418.475,252.17 423.475,249.67 "
+       id="polygon178" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="418.475,259.67 413.475,249.67 418.475,252.17 423.475,249.67 "
+       id="polygon180" />
+  </g>
+  <g
+     id="g182"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="576.61298"
+       y1="274.948"
+       x2="546.08899"
+       y2="280.05399"
+       id="line184" />
+    <polygon
+       style="fill:#000000"
+       points="538.692,281.291 547.73,274.71 546.089,280.054 549.38,284.573 "
+       id="polygon186" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="538.692,281.291 547.73,274.71 546.089,280.054 549.38,284.573 "
+       id="polygon188" />
+  </g>
+  <g
+     id="g190"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="536.487"
+       y1="281.66"
+       x2="567.01099"
+       y2="276.55399"
+       id="line192" />
+    <polygon
+       style="fill:#000000"
+       points="574.408,275.317 565.37,281.898 567.011,276.554 563.72,272.035 "
+       id="polygon194" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="574.408,275.317 565.37,281.898 567.011,276.554 563.72,272.035 "
+       id="polygon196" />
+  </g>
+  <g
+     id="g198"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="527.23297"
+       y1="331.521"
+       x2="572.15997"
+       y2="343.96399"
+       id="line200" />
+    <polygon
+       style="fill:#000000"
+       points="579.388,345.965 568.416,348.115 572.16,343.964 571.085,338.478 "
+       id="polygon202" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="579.388,345.965 568.416,348.115 572.16,343.964 571.085,338.478 "
+       id="polygon204" />
+  </g>
+  <g
+     id="g206"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="581.54303"
+       y1="346.56201"
+       x2="536.61603"
+       y2="334.12"
+       id="line208" />
+    <polygon
+       style="fill:#000000"
+       points="529.388,332.118 540.36,329.968 536.616,334.12 537.691,339.605 "
+       id="polygon210" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="529.388,332.118 540.36,329.968 536.616,334.12 537.691,339.605 "
+       id="polygon212" />
+  </g>
+  <g
+     id="g214"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="771.06"
+       y1="258.85001"
+       x2="808.15503"
+       y2="258.85001"
+       id="line216" />
+    <polygon
+       style="fill:#000000"
+       points="815.655,258.85 805.655,263.85 808.155,258.85 805.655,253.85 "
+       id="polygon218" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="815.655,258.85 805.655,263.85 808.155,258.85 805.655,253.85 "
+       id="polygon220" />
+  </g>
+  <g
+     id="g222"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="817.89203"
+       y1="258.85001"
+       x2="780.797"
+       y2="258.85001"
+       id="line224" />
+    <polygon
+       style="fill:#000000"
+       points="773.297,258.85 783.297,253.85 780.797,258.85 783.297,263.85 "
+       id="polygon226" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="773.297,258.85 783.297,253.85 780.797,258.85 783.297,263.85 "
+       id="polygon228" />
+  </g>
+  <g
+     id="g230"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="771.06"
+       y1="371.85001"
+       x2="808.15503"
+       y2="371.85001"
+       id="line232" />
+    <polygon
+       style="fill:#000000"
+       points="815.655,371.85 805.655,376.85 808.155,371.85 805.655,366.85 "
+       id="polygon234" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="815.655,371.85 805.655,376.85 808.155,371.85 805.655,366.85 "
+       id="polygon236" />
+  </g>
+  <g
+     id="g238"
+     transform="matrix(0.5,0,0,0.5,93.516593,110.62298)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="817.89203"
+       y1="371.85001"
+       x2="780.797"
+       y2="371.85001"
+       id="line240" />
+    <polygon
+       style="fill:#000000"
+       points="773.297,371.85 783.297,366.85 780.797,371.85 783.297,376.85 "
+       id="polygon242" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="773.297,371.85 783.297,366.85 780.797,371.85 783.297,376.85 "
+       id="polygon244" />
+  </g>
+</svg>

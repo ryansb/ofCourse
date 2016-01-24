@@ -7,9 +7,9 @@ from gabbi import driver
 
 import ofcourse.util
 
-ofcourse.util.base_dir = '/tmp/ofcourse-tests'
-
 from ofcourse.site import app
+
+ofcourse.util.base_dir = '/tmp/ofcourse-tests'
 
 try:
     subprocess.check_output(['rm', '-rf', '/tmp/ofcourse-tests'])

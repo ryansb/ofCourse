@@ -9,7 +9,7 @@ import ofcourse.util
 
 ofcourse.util.base_dir = '/tmp/ofcourse-tests'
 
-from ofcourse.site import app
+from ofcourse.site import app  # noqa PEP8 ignore
 
 try:
     subprocess.check_output(['rm', '-rf', '/tmp/ofcourse-tests'])

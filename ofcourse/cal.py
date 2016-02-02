@@ -9,10 +9,12 @@ import re
 
 from icalendar import Calendar, Event, vText
 
+
 def load_calendar(fn):
     ' Load a calendar file and parse it into a Calendar structure '
     with open(fn) as infile:
         return Calendar.from_ical(infile.read())
+
 
 def event_start_time(ev):
     '''
@@ -22,10 +24,12 @@ def event_start_time(ev):
     from datetime import datetime
     return datetime.fromordinal(ev.decoded('dtstart').toordinal())
 
+
 def sorted_events(cal):
     ' Organize the relevant events from the calendar '
     return sorted([ev for ev in cal.subcomponents if type(ev) == Event],
                   key=event_start_time)
+
 
 def normalize_categories(ev):
     ' Always return an array of categories '
@@ -34,6 +38,7 @@ def normalize_categories(ev):
     else:
         return [str(cat).lower() for cat in ev['categories']]
 
+
 def calendar_weeks(cal):
     ' Organize calendar event by week '
     def week_num(ev):
@@ -41,7 +46,10 @@ def calendar_weeks(cal):
         return ev.decoded('dtstart').isocalendar()[1]
     return [list(wk[1]) for wk in groupby(sorted_events(cal), week_num)]
 
+
 assignment_re = re.compile(r"^(ASSIGNED|DUE): (.*)\w*(?:<(.*)>)")
+
+
 def assignment_data(desc):
     ' Parse the description for assignments '
     ret = []
@@ -51,9 +59,11 @@ def assignment_data(desc):
             ret.append(evdata.groups(''))
     return ret
 
+
 def items_assigned(items):
     ' Only return assignments that are newly assigned '
     return [it for it in items if it[0] == 'ASSIGNED']
+
 
 def items_due(items):
     ' Only return assignments that are due '

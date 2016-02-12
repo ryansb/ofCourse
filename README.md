@@ -1,8 +1,8 @@
 # ofCourse - Open, Free Course(ware)
 
 [![test status](https://api.travis-ci.org/ryansb/ofCourse.svg)](https://travis-ci.org/ryansb/ofCourse)
-[![version](https://pypip.in/v/ofcourse/badge.png)](https://pypi.python.org/pypi/ofcourse/)
-[![downloads](https://pypip.in/download/ofcourse/badge.svg)](https://pypi.python.org/pypi/ofcourse/)
+[![version](https://img.shields.io/pypi/v/ofcourse.svg)](https://pypi.python.org/pypi/ofcourse/)
+[![downloads](https://img.shields.io/pypi/dm/ofcourse.svg)](https://pypi.python.org/pypi/ofcourse/)
 
 ## Warning
 

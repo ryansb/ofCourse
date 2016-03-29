@@ -140,7 +140,11 @@ def generate_token(uname, passwd):
     session = requests.post(
         "https://openshift.redhat.com/broker/rest/user/authorizations",
         auth=requests.auth.HTTPBasicAuth(uname, passwd),
-        params={'scope': 'session'}
+        params={
+            'scope': 'session',
+            'note': 'ofCourse CLI auth token',
+        },
+        headers={'Accept': 'application/json'},
     )
     if session.status_code != 201:
         raise Exception("Uhoh {} response={}".format(session.status_code,

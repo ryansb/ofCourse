@@ -144,6 +144,7 @@ def generate_token(uname, passwd):
             'scope': 'session',
             'note': 'ofCourse CLI auth token',
         },
+        headers={'Accept': 'application/json'},
     )
     if session.status_code != 201:
         raise Exception("Uhoh {} response={}".format(session.status_code,
